@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/712488f33fe84d85ae0f28c9be38aa08/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 712488f33fe84d85ae0f28c9be38aa08
+run_name: aged-wasp-518
+run_uuid: 712488f33fe84d85ae0f28c9be38aa08
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680862355591
+status: 1
+tags: []
+user_id: kilian

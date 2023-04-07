@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/07797a192e644af381dcb2dc59da2a01/artifacts
+end_time: 1680862642538
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 07797a192e644af381dcb2dc59da2a01
+run_name: blushing-mare-806
+run_uuid: 07797a192e644af381dcb2dc59da2a01
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680862642527
+status: 3
+tags: []
+user_id: kilian
