@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/0/23ea10affe93426b83a153617f33d986/artifacts
+end_time: 1682071958914
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 23ea10affe93426b83a153617f33d986
+run_name: able-cub-719
+run_uuid: 23ea10affe93426b83a153617f33d986
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1682071958904
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/0/bbe61208c4c2426f8bb262e68a5e266c/artifacts
+end_time: 1682071967441
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bbe61208c4c2426f8bb262e68a5e266c
+run_name: inquisitive-owl-651
+run_uuid: bbe61208c4c2426f8bb262e68a5e266c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1682071967432
+status: 3
+tags: []
+user_id: kilian

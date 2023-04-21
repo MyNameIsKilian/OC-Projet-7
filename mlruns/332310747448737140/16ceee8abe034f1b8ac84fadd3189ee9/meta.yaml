@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/332310747448737140/16ceee8abe034f1b8ac84fadd3189ee9/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '332310747448737140'
+lifecycle_stage: active
+run_id: 16ceee8abe034f1b8ac84fadd3189ee9
+run_name: adaptable-robin-51
+run_uuid: 16ceee8abe034f1b8ac84fadd3189ee9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1682072174518
+status: 1
+tags: []
+user_id: kilian
