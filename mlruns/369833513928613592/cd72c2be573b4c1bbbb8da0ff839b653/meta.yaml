@@ -1,0 +1,16 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/369833513928613592/cd72c2be573b4c1bbbb8da0ff839b653/artifacts
+deleted_time: null
+end_time: null
+entry_point_name: ''
+experiment_id: '369833513928613592'
+lifecycle_stage: active
+run_id: cd72c2be573b4c1bbbb8da0ff839b653
+run_name: monumental-lynx-636
+run_uuid: cd72c2be573b4c1bbbb8da0ff839b653
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685096597478
+status: 1
+tags: []
+user_id: kilian

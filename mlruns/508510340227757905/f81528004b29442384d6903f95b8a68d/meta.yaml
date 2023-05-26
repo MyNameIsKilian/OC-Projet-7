@@ -1,0 +1,16 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/508510340227757905/f81528004b29442384d6903f95b8a68d/artifacts
+deleted_time: null
+end_time: null
+entry_point_name: ''
+experiment_id: '508510340227757905'
+lifecycle_stage: active
+run_id: f81528004b29442384d6903f95b8a68d
+run_name: rare-hound-899
+run_uuid: f81528004b29442384d6903f95b8a68d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685096773022
+status: 1
+tags: []
+user_id: kilian
