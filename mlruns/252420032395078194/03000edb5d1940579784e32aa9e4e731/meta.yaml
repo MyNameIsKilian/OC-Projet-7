@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/03000edb5d1940579784e32aa9e4e731/artifacts
+end_time: 1685646460835
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: 03000edb5d1940579784e32aa9e4e731
+run_name: redolent-sheep-849
+run_uuid: 03000edb5d1940579784e32aa9e4e731
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646460827
+status: 3
+tags: []
+user_id: kilian

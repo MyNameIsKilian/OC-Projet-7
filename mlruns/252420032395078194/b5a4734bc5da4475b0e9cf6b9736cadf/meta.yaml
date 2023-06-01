@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/b5a4734bc5da4475b0e9cf6b9736cadf/artifacts
+end_time: 1685646157557
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: b5a4734bc5da4475b0e9cf6b9736cadf
+run_name: wistful-duck-599
+run_uuid: b5a4734bc5da4475b0e9cf6b9736cadf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646157549
+status: 3
+tags: []
+user_id: kilian

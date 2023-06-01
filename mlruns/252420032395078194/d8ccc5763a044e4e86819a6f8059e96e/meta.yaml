@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/d8ccc5763a044e4e86819a6f8059e96e/artifacts
+end_time: 1685646157595
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: d8ccc5763a044e4e86819a6f8059e96e
+run_name: painted-vole-773
+run_uuid: d8ccc5763a044e4e86819a6f8059e96e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646157587
+status: 3
+tags: []
+user_id: kilian

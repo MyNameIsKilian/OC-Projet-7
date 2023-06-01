@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/fad2bff941e3448aae91f6ec261000e1/artifacts
+end_time: 1685646157511
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: fad2bff941e3448aae91f6ec261000e1
+run_name: nebulous-croc-589
+run_uuid: fad2bff941e3448aae91f6ec261000e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646157502
+status: 3
+tags: []
+user_id: kilian

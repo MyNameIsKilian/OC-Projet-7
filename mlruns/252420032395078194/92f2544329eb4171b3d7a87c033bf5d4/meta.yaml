@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/92f2544329eb4171b3d7a87c033bf5d4/artifacts
+end_time: 1685646460815
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: 92f2544329eb4171b3d7a87c033bf5d4
+run_name: valuable-stag-726
+run_uuid: 92f2544329eb4171b3d7a87c033bf5d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646460806
+status: 3
+tags: []
+user_id: kilian

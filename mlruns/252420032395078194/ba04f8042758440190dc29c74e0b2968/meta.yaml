@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/ba04f8042758440190dc29c74e0b2968/artifacts
+end_time: 1685646488545
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: ba04f8042758440190dc29c74e0b2968
+run_name: spiffy-snipe-381
+run_uuid: ba04f8042758440190dc29c74e0b2968
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646486584
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/fae374669dfe43b48d53718767519b6e/artifacts
+end_time: 1685646486495
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: fae374669dfe43b48d53718767519b6e
+run_name: victorious-gull-835
+run_uuid: fae374669dfe43b48d53718767519b6e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646486486
+status: 3
+tags: []
+user_id: kilian

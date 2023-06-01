@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/cd9abaa0291c424487aaabbf11754821/artifacts
+end_time: 1685646461891
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: cd9abaa0291c424487aaabbf11754821
+run_name: unleashed-flea-657
+run_uuid: cd9abaa0291c424487aaabbf11754821
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646461856
+status: 4
+tags: []
+user_id: kilian

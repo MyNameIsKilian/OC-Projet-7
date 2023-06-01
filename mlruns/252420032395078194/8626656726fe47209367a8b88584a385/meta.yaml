@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/8626656726fe47209367a8b88584a385/artifacts
+end_time: 1685646157230
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: 8626656726fe47209367a8b88584a385
+run_name: adaptable-ape-427
+run_uuid: 8626656726fe47209367a8b88584a385
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685646157221
+status: 3
+tags: []
+user_id: kilian
