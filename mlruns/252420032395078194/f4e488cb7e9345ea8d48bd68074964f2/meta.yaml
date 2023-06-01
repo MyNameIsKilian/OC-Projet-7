@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/f4e488cb7e9345ea8d48bd68074964f2/artifacts
+end_time: 1685645770864
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: f4e488cb7e9345ea8d48bd68074964f2
+run_name: inquisitive-flea-154
+run_uuid: f4e488cb7e9345ea8d48bd68074964f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685645770855
+status: 4
+tags: []
+user_id: kilian

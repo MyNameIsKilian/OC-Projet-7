@@ -1,0 +1,6 @@
+artifact_location: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194
+creation_time: 1685643500200
+experiment_id: '252420032395078194'
+last_update_time: 1685643500200
+lifecycle_stage: active
+name: Metrics LGBM Classifier after Grid Search CV

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/252420032395078194/c3b344c11454436f885cc792262f4cb5/artifacts
+end_time: 1685645462031
+entry_point_name: ''
+experiment_id: '252420032395078194'
+lifecycle_stage: active
+run_id: c3b344c11454436f885cc792262f4cb5
+run_name: unique-trout-638
+run_uuid: c3b344c11454436f885cc792262f4cb5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685645448355
+status: 3
+tags: []
+user_id: kilian
