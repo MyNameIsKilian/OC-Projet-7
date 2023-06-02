@@ -1,0 +1,38 @@
+service: flask-api
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+
+provider:
+  name: aws
+  runtime: python3.9
+  timeout: 12
+  memorySize: 128
+  stage: 'dev-0-1-0'
+  region: 'eu-west-3'
+  profile: heavn
+
+package:
+  individually: true
+  patterns:
+    - '!./**'
+    - '!./**.csv'
+    - '!./mlruns/**'
+
+# custom:
+#   wsgi:
+#    app: app.app
+#    packRequirements: false
+
+functions:
+  app:
+    handler: app.main
+    package:
+      patterns:
+        - './app.py'
+
+    events:
+      - http:
+          path: iris
+          method: get
