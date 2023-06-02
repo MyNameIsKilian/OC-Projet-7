@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/7dc6de7545c8401aa222ce25955a5de0/artifacts
+end_time: 1685690784392
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 7dc6de7545c8401aa222ce25955a5de0
+run_name: skillful-sponge-212
+run_uuid: 7dc6de7545c8401aa222ce25955a5de0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784385
+status: 3
+tags: []
+user_id: kilian

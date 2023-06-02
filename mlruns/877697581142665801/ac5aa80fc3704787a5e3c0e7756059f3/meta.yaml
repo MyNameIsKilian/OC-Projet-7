@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/ac5aa80fc3704787a5e3c0e7756059f3/artifacts
+end_time: 1685690784534
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: ac5aa80fc3704787a5e3c0e7756059f3
+run_name: gaudy-colt-167
+run_uuid: ac5aa80fc3704787a5e3c0e7756059f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784524
+status: 3
+tags: []
+user_id: kilian

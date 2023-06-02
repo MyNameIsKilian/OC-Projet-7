@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/7b683b6f777e4b99a85df12834259343/artifacts
+end_time: 1685690784638
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 7b683b6f777e4b99a85df12834259343
+run_name: glamorous-foal-548
+run_uuid: 7b683b6f777e4b99a85df12834259343
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784631
+status: 3
+tags: []
+user_id: kilian

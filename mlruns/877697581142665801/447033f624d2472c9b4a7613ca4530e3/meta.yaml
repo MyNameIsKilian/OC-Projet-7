@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/447033f624d2472c9b4a7613ca4530e3/artifacts
+end_time: 1685690784494
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 447033f624d2472c9b4a7613ca4530e3
+run_name: funny-loon-30
+run_uuid: 447033f624d2472c9b4a7613ca4530e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784486
+status: 3
+tags: []
+user_id: kilian

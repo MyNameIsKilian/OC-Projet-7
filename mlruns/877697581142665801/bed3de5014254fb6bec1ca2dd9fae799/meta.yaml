@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/bed3de5014254fb6bec1ca2dd9fae799/artifacts
+end_time: 1685690784564
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: bed3de5014254fb6bec1ca2dd9fae799
+run_name: capricious-mink-79
+run_uuid: bed3de5014254fb6bec1ca2dd9fae799
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784556
+status: 3
+tags: []
+user_id: kilian

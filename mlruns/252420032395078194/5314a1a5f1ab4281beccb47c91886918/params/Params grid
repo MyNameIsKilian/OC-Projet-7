@@ -1,1 +1,0 @@
-{'classifier__class_weight': 'balanced', 'classifier__max_depth': 10, 'classifier__n_estimators': 1000, 'preprocessor__num_scaler': StandardScaler()}

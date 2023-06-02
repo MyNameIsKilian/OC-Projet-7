@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/2158771557f14baea7c61db1dc6ad93b/artifacts
+end_time: 1685690784503
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 2158771557f14baea7c61db1dc6ad93b
+run_name: luminous-panda-978
+run_uuid: 2158771557f14baea7c61db1dc6ad93b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784496
+status: 3
+tags: []
+user_id: kilian

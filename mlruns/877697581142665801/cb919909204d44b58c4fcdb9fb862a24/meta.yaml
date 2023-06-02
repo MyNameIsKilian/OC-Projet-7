@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/cb919909204d44b58c4fcdb9fb862a24/artifacts
+end_time: 1685690784620
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: cb919909204d44b58c4fcdb9fb862a24
+run_name: gentle-snake-873
+run_uuid: cb919909204d44b58c4fcdb9fb862a24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784612
+status: 3
+tags: []
+user_id: kilian

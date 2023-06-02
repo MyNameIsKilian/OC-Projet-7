@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/2f47c4a1936d4f86bb2c27252fa3d754/artifacts
+end_time: 1685690784365
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 2f47c4a1936d4f86bb2c27252fa3d754
+run_name: orderly-mare-719
+run_uuid: 2f47c4a1936d4f86bb2c27252fa3d754
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784357
+status: 3
+tags: []
+user_id: kilian

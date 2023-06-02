@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/79ad175bd7a645bb8ad7dbe11d81addf/artifacts
+end_time: 1685690784666
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 79ad175bd7a645bb8ad7dbe11d81addf
+run_name: bold-doe-361
+run_uuid: 79ad175bd7a645bb8ad7dbe11d81addf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784658
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/b3eb431fc0ed47a3bbf9c131c3c1cf60/artifacts
+end_time: 1685690784656
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: b3eb431fc0ed47a3bbf9c131c3c1cf60
+run_name: luxuriant-snake-533
+run_uuid: b3eb431fc0ed47a3bbf9c131c3c1cf60
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784649
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/e9f585afa7f54c9a826c4ddbe0833781/artifacts
+end_time: 1685690784429
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: e9f585afa7f54c9a826c4ddbe0833781
+run_name: nimble-swan-845
+run_uuid: e9f585afa7f54c9a826c4ddbe0833781
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784421
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/78963fbd25634bb2a99c2e8b9f1b27b5/artifacts
+end_time: 1685690784798
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 78963fbd25634bb2a99c2e8b9f1b27b5
+run_name: big-goose-298
+run_uuid: 78963fbd25634bb2a99c2e8b9f1b27b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784790
+status: 3
+tags: []
+user_id: kilian

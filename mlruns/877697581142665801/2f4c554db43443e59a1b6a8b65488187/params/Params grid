@@ -1,0 +1,1 @@
+{'classifier__class_weight': 'balanced', 'classifier__learning_rate': 0.01, 'classifier__max_depth': -1, 'classifier__n_estimators': 100, 'classifier__num_leaves': 30, 'preprocessor__num_scaler': MinMaxScaler()}

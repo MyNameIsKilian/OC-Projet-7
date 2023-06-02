@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/70654906db8b497b83840459768e1f0d/artifacts
+end_time: 1685690784864
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 70654906db8b497b83840459768e1f0d
+run_name: bright-stork-977
+run_uuid: 70654906db8b497b83840459768e1f0d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784856
+status: 3
+tags: []
+user_id: kilian

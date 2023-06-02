@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/90fc326249064aa28190e629505e7d19/artifacts
+end_time: 1685690784769
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 90fc326249064aa28190e629505e7d19
+run_name: industrious-shad-653
+run_uuid: 90fc326249064aa28190e629505e7d19
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784761
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/a2fea16bc74c4b5c9dcc00ca8a5eebd2/artifacts
+end_time: 1685690784438
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: a2fea16bc74c4b5c9dcc00ca8a5eebd2
+run_name: unequaled-bee-205
+run_uuid: a2fea16bc74c4b5c9dcc00ca8a5eebd2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784431
+status: 3
+tags: []
+user_id: kilian

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/64e755705716479dbdf8b2da80c91c25/artifacts
+end_time: 1685690784207
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 64e755705716479dbdf8b2da80c91c25
+run_name: intelligent-gnu-292
+run_uuid: 64e755705716479dbdf8b2da80c91c25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784200
+status: 3
+tags: []
+user_id: kilian

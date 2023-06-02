@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/fd77aa57dd2a4d469140b6e7da81886f/artifacts
+end_time: 1685690784544
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: fd77aa57dd2a4d469140b6e7da81886f
+run_name: selective-kit-580
+run_uuid: fd77aa57dd2a4d469140b6e7da81886f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784536
+status: 3
+tags: []
+user_id: kilian

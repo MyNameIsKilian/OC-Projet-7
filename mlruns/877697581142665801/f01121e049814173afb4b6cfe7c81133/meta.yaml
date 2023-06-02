@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/f01121e049814173afb4b6cfe7c81133/artifacts
+end_time: 1685690784322
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: f01121e049814173afb4b6cfe7c81133
+run_name: indecisive-newt-96
+run_uuid: f01121e049814173afb4b6cfe7c81133
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784314
+status: 3
+tags: []
+user_id: kilian

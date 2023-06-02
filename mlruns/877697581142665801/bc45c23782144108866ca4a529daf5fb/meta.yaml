@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/bc45c23782144108866ca4a529daf5fb/artifacts
+end_time: 1685690784512
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: bc45c23782144108866ca4a529daf5fb
+run_name: melodic-skunk-627
+run_uuid: bc45c23782144108866ca4a529daf5fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784505
+status: 3
+tags: []
+user_id: kilian

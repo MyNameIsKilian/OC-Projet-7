@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/d5211f7c265548df89f25327caba9d06/artifacts
+end_time: 1685690784288
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: d5211f7c265548df89f25327caba9d06
+run_name: bald-stag-178
+run_uuid: d5211f7c265548df89f25327caba9d06
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784276
+status: 3
+tags: []
+user_id: kilian

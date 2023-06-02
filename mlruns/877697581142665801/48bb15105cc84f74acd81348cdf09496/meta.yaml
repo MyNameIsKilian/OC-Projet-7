@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/48bb15105cc84f74acd81348cdf09496/artifacts
+end_time: 1685690784456
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 48bb15105cc84f74acd81348cdf09496
+run_name: secretive-doe-64
+run_uuid: 48bb15105cc84f74acd81348cdf09496
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784449
+status: 3
+tags: []
+user_id: kilian

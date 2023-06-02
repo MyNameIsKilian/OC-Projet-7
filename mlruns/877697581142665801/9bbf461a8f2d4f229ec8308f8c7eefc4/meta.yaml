@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/9bbf461a8f2d4f229ec8308f8c7eefc4/artifacts
+end_time: 1685690784789
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 9bbf461a8f2d4f229ec8308f8c7eefc4
+run_name: bright-pug-942
+run_uuid: 9bbf461a8f2d4f229ec8308f8c7eefc4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784781
+status: 3
+tags: []
+user_id: kilian

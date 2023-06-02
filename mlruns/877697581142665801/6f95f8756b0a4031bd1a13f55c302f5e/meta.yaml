@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/6f95f8756b0a4031bd1a13f55c302f5e/artifacts
+end_time: 1685690784647
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 6f95f8756b0a4031bd1a13f55c302f5e
+run_name: crawling-turtle-65
+run_uuid: 6f95f8756b0a4031bd1a13f55c302f5e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784640
+status: 3
+tags: []
+user_id: kilian

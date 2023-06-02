@@ -1,0 +1,1 @@
+{'classifier__class_weight': 'balanced', 'classifier__learning_rate': 0.01, 'classifier__max_depth': -1, 'classifier__n_estimators': 2000, 'classifier__num_leaves': 50, 'preprocessor__num_scaler': StandardScaler()}

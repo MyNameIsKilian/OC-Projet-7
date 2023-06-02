@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/f2ecad6fc6ae44f5b77af2078caf7931/artifacts
+end_time: 1685690784554
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: f2ecad6fc6ae44f5b77af2078caf7931
+run_name: nimble-fawn-489
+run_uuid: f2ecad6fc6ae44f5b77af2078caf7931
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784545
+status: 3
+tags: []
+user_id: kilian

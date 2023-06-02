@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/d5b58e31589b4fa480f673a3496d8b18/artifacts
+end_time: 1685690784701
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: d5b58e31589b4fa480f673a3496d8b18
+run_name: chill-cow-311
+run_uuid: d5b58e31589b4fa480f673a3496d8b18
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784689
+status: 3
+tags: []
+user_id: kilian

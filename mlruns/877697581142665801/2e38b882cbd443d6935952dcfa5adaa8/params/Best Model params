@@ -1,0 +1,2 @@
+LGBMClassifier(class_weight='balanced', learning_rate=0.01, n_estimators=1000,
+               num_leaves=30)

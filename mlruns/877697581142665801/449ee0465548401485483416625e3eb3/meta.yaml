@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/449ee0465548401485483416625e3eb3/artifacts
+end_time: 1685690784854
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: 449ee0465548401485483416625e3eb3
+run_name: abundant-ram-1
+run_uuid: 449ee0465548401485483416625e3eb3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784846
+status: 3
+tags: []
+user_id: kilian

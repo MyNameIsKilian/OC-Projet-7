@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kilian/workspaces/workspace-data/OC-P7/mlruns/877697581142665801/e610795346d74c8ab24cdd0a4c3db055/artifacts
+end_time: 1685690784740
+entry_point_name: ''
+experiment_id: '877697581142665801'
+lifecycle_stage: active
+run_id: e610795346d74c8ab24cdd0a4c3db055
+run_name: legendary-pig-883
+run_uuid: e610795346d74c8ab24cdd0a4c3db055
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685690784732
+status: 3
+tags: []
+user_id: kilian
