@@ -2,7 +2,7 @@ service: flask-api
 
 plugins:
   - serverless-python-requirements
-  - serverless-wsgi
+  # - serverless-wsgi
 
 provider:
   name: aws
@@ -12,6 +12,25 @@ provider:
   stage: 'dev-0-1-0'
   region: 'eu-west-3'
   profile: heavn
+  apiGateway:
+    shouldStartNameWithService: true
+    apiKeys:
+      - dev-0-1-0-key
+    usagePlan:
+      quota:
+        limit: 1000000
+        period: DAY
+      throttle:
+        burstLimit: 5000
+        rateLimit: 1000
+  iam:
+    role:
+      statements:
+        - Effect: 'Allow'
+          Action:
+            - lambda:InvokeFunction
+            - lambda:InvokeAsync
+          Resource: "*"
 
 package:
   individually: true
@@ -19,6 +38,9 @@ package:
     - '!./**'
     - '!./**.csv'
     - '!./mlruns/**'
+    - './sklearn/**'
+    - './scipy/**'
+    - './joblib/**'
 
 # custom:
 #   wsgi:
@@ -27,10 +49,10 @@ package:
 
 functions:
   app:
-    handler: app.main
+    handler: src/app.main
     package:
       patterns:
-        - './app.py'
+        - './src/**'
 
     events:
       - http:

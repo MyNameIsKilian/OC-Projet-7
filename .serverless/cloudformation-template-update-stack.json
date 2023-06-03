@@ -134,6 +134,14 @@
                       "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/flask-api-dev-0-1-0*:*:*"
                     }
                   ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "lambda:InvokeFunction",
+                    "lambda:InvokeAsync"
+                  ],
+                  "Resource": "*"
                 }
               ]
             }
@@ -162,9 +170,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/flask-api/dev-0-1-0/1685707136218-2023-06-02T11:58:56.218Z/app.zip"
+          "S3Key": "serverless/flask-api/dev-0-1-0/1685798225301-2023-06-03T13:17:05.301Z/app.zip"
         },
-        "Handler": "app.handler",
+        "Handler": "src/app.main",
         "Runtime": "python3.9",
         "FunctionName": "flask-api-dev-0-1-0-app",
         "MemorySize": 128,
@@ -180,20 +188,20 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersionEXJxMbPsIGiIOvGrsT3vpl1JWLvUd09yVoo46LnqI": {
+    "AppLambdaVersionbIF5MJiMjx96AGV2wKUPsH93oe0P9ydwl5DQmi7Fsg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "ecIuYwdtpJvC3yHTWXPJ+dNDGkLRUUD1W36nMWbD4J4="
+        "CodeSha256": "2JZAhuytlB1eXUc7cm5AL0ZXmlxZqs8dd8c1QRUX8js="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "dev-0-1-0-flask-api",
+        "Name": "flask-api-dev-0-1-0",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -263,7 +271,7 @@
         "AppLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1685707107534": {
+    "ApiGatewayDeployment1685798194491": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -274,6 +282,58 @@
       "DependsOn": [
         "ApiGatewayMethodIrisGet"
       ]
+    },
+    "ApiGatewayApiKey1": {
+      "Type": "AWS::ApiGateway::ApiKey",
+      "Properties": {
+        "Enabled": true,
+        "Name": "dev-0-1-0-key",
+        "StageKeys": [
+          {
+            "RestApiId": {
+              "Ref": "ApiGatewayRestApi"
+            },
+            "StageName": "dev-0-1-0"
+          }
+        ]
+      },
+      "DependsOn": "ApiGatewayDeployment1685798194491"
+    },
+    "ApiGatewayUsagePlan": {
+      "Type": "AWS::ApiGateway::UsagePlan",
+      "DependsOn": "ApiGatewayDeployment1685798194491",
+      "Properties": {
+        "ApiStages": [
+          {
+            "ApiId": {
+              "Ref": "ApiGatewayRestApi"
+            },
+            "Stage": "dev-0-1-0"
+          }
+        ],
+        "Description": "Usage plan for flask-api dev-0-1-0 stage",
+        "UsagePlanName": "flask-api-dev-0-1-0",
+        "Quota": {
+          "Limit": 1000000,
+          "Period": "DAY"
+        },
+        "Throttle": {
+          "BurstLimit": 5000,
+          "RateLimit": 1000
+        }
+      }
+    },
+    "ApiGatewayUsagePlanKey1": {
+      "Type": "AWS::ApiGateway::UsagePlanKey",
+      "Properties": {
+        "KeyId": {
+          "Ref": "ApiGatewayApiKey1"
+        },
+        "KeyType": "API_KEY",
+        "UsagePlanId": {
+          "Ref": "ApiGatewayUsagePlan"
+        }
+      }
     },
     "AppLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
@@ -325,7 +385,7 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersionEXJxMbPsIGiIOvGrsT3vpl1JWLvUd09yVoo46LnqI"
+        "Ref": "AppLambdaVersionbIF5MJiMjx96AGV2wKUPsH93oe0P9ydwl5DQmi7Fsg"
       },
       "Export": {
         "Name": "sls-flask-api-dev-0-1-0-AppLambdaFunctionQualifiedArn"
