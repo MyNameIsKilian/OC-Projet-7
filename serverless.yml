@@ -49,10 +49,10 @@ package:
 
 functions:
   app:
-    handler: src/app.main
+    handler: lambda/loadData/handler.main
     package:
       patterns:
-        - './src/**'
+        - './lambda/**'
 
     events:
       - http:

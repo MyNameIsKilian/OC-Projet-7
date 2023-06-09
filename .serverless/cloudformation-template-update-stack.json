@@ -170,9 +170,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/flask-api/dev-0-1-0/1685798225301-2023-06-03T13:17:05.301Z/app.zip"
+          "S3Key": "serverless/flask-api/dev-0-1-0/1686295346884-2023-06-09T07:22:26.884Z/app.zip"
         },
-        "Handler": "src/app.main",
+        "Handler": "lambda/loadData/handler.main",
         "Runtime": "python3.9",
         "FunctionName": "flask-api-dev-0-1-0-app",
         "MemorySize": 128,
@@ -188,14 +188,14 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersionbIF5MJiMjx96AGV2wKUPsH93oe0P9ydwl5DQmi7Fsg": {
+    "AppLambdaVersion2K0W8HKBY4J4VUka4vs9UXF3wQpB1DPD5hIq6dbZJBo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "2JZAhuytlB1eXUc7cm5AL0ZXmlxZqs8dd8c1QRUX8js="
+        "CodeSha256": "HzQleuih2A6lJuQAgIXt3mx7psbsaHsFa2gkID02iGA="
       }
     },
     "ApiGatewayRestApi": {
@@ -271,7 +271,7 @@
         "AppLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1685798194491": {
+    "ApiGatewayDeployment1686295332077": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -297,11 +297,11 @@
           }
         ]
       },
-      "DependsOn": "ApiGatewayDeployment1685798194491"
+      "DependsOn": "ApiGatewayDeployment1686295332077"
     },
     "ApiGatewayUsagePlan": {
       "Type": "AWS::ApiGateway::UsagePlan",
-      "DependsOn": "ApiGatewayDeployment1685798194491",
+      "DependsOn": "ApiGatewayDeployment1686295332077",
       "Properties": {
         "ApiStages": [
           {
@@ -385,7 +385,7 @@
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersionbIF5MJiMjx96AGV2wKUPsH93oe0P9ydwl5DQmi7Fsg"
+        "Ref": "AppLambdaVersion2K0W8HKBY4J4VUka4vs9UXF3wQpB1DPD5hIq6dbZJBo"
       },
       "Export": {
         "Name": "sls-flask-api-dev-0-1-0-AppLambdaFunctionQualifiedArn"
