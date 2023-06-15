@@ -1,6 +1,0 @@
-altair==4.0
-numpy<1.23.0,>=1.21
-pyqt5<5.16
-pyqtwebengine<5.16
-daal==2021.2.3
-pytz<2023
