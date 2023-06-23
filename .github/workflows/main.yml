@@ -1,0 +1,32 @@
+name: Deploy Flask API to PythonAnywhere
+on:
+  push:
+    branches:
+      - main
+env:
+  PYTHON_VERSION: 3.9
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run unit tests
+      run: pytest -v
+    # - name: Deploy to PythonAnywhere
+    #   uses: chrislennon/action-pythonanywhere-deploy@v1
+    #   with:
+    #     username: ${{ secrets.PYTHONANYWHERE_USERNAME }}
+    #     hostname: ${{ secrets.PYTHONANYWHERE_HOSTNAME }}
+    #     project: ${{ secrets.PYTHONANYWHERE_PROJECT_PATH }}
+    - name: Deploy to PythonAnywhere
+      env:
+        PA_API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
+      run: |
+        git push https://$PA_API_TOKEN@git.pythonanywhere.com/$PYTHONANYWHERE_USERNAME/$PYTHONANYWHERE_PROJECT_PATH.git HEAD:master
