@@ -6,9 +6,8 @@ loaded_model = pickle.load(open('lgbm_model.sav', 'rb'))
 def add_numbers(a,b):
     return a+b
 
-def display_model():
-    print(loaded_model)
-    return True
+def display_model_leaves():
+    return loaded_model.num_leaves
 
 def main():
     display_model()
