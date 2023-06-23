@@ -1,8 +1,7 @@
 import pickle
 
-
 # loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
-#
+
 def add_numbers(a,b):
     return a+b
 
