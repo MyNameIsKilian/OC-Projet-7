@@ -160,13 +160,5 @@ cython_debug/
 #.idea/
 
 # large CSV
-*.csv
-
-scipy/*
-sklearn/*
-joblib/*
-
-.serverless/*
-src/**
-
-.env
+data_agg.csv
+data_cleaned.csv
