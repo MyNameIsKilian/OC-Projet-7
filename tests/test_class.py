@@ -5,6 +5,6 @@ class TestClass:
         print("running add_numbers function")
         assert add_numbers(2, 3) == 5
 
-    def test_load_model(self):
-        print("running display_model function")
-        assert display_model() == True
+    def test_model_leaves(self):
+        print("running display_model_leaves function")
+        assert display_model_leaves() == 30

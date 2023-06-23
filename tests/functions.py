@@ -8,6 +8,3 @@ def add_numbers(a,b):
 
 def display_model_leaves():
     return loaded_model.num_leaves
-
-def main():
-    display_model()
