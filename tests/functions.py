@@ -1,10 +1,14 @@
 import pickle
-
-# loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+import pandas as pd
 
 def add_numbers(a,b):
     return a+b
 
-# def display_model_leaves():
-#     loaded_model = pickle.load(open('lgbm_model.sav', 'rb'))
-#     return loaded_model.num_leaves
+def display_model_leaves():
+    loaded_model = pickle.load(open('lgbm_model.sav', 'rb'))
+    return loaded_model.num_leaves
+
+def predict_class():
+    sample_data = pd.read_csv('X_train_sample.csv', index_col=[0])
+    loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+    return loaded_pipeline.predict(sample_data.iloc[1:2,:])
