@@ -1,5 +1,4 @@
 from functions import *
-from IPython.display import display
 
 class TestClass:
     def test_add_numbers(self):
