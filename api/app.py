@@ -1,55 +1,109 @@
-from flask import Flask
-import json
+from flask import Flask, request
+import traceback
 import pandas as pd
 import pickle
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+import numpy as np
+# import json
+from sklearn.neighbors import NearestNeighbors
 
 app = Flask(__name__)
+app.config["DEBUG"] = True
+
+# MAIN_COLUMNS = ['CODE_GENDER_M', 'FLAG_OWN_CAR', 'FLAG_OWN_REALTY', 'CNT_CHILDREN',
+#                 'NAME_FAMILY_STATUS_Married', 'NAME_INCOME_TYPE_Working',
+#                 'AMT_INCOME_TOTAL', 'DAYS_BIRTH', 'DAYS_EMPLOYED']
+
+MAIN_COLUMNS = ['CNT_CHILDREN','APPS_EXT_SOURCE_MEAN', 'APPS_GOODS_CREDIT_RATIO',
+                'AMT_INCOME_TOTAL', 'DAYS_BIRTH', 'DAYS_EMPLOYED']
+
+# data = pd.read_csv('./X_train_sample.csv', index_col=[0])
+# loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+# data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
+# df_final = pd.DataFrame(data_scaled, columns=data.columns)
 
 @app.route("/")
 def main():
 
     return {
-        'api':'return from GitHub pull 23/06 12:24'
+        'api':'quick set up',
+        # 'data_shape': df_final.shape
     }
 
-@app.route('/iris')
-def iris_prediction():
+@app.route('/prediction', methods=['POST'])
+def lgbm_prediction():
 
-    resp = load_iris()
-    return resp
+    try:
+        row_data = request.get_json()
+        loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+        row_df = pd.DataFrame([row_data], index=[0])
+        prediction = loaded_pipeline.predict_proba(row_df)
 
-@app.route('/data')
-def iris_prediction():
+        response = {
+            'status_code': 200,
+            'body': prediction.tolist()
+        }
+        return response
 
-    resp = load_my_dataframe()
-    return resp
+    except Exception as e:
+        traceback.print_exc()
+
+        response = {
+            'status_code': 500,
+            'body': str(e)
+        }
+        return response
+
+@app.route('/shap-values', methods=['POST'])
+def load_shap_values():
+
+    try:
+        row_data = request.get_json()
+        row_df = pd.DataFrame([row_data], index=[0])
+        loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+        explainer = pickle.load(open('shap_explainer.sav', 'rb'))
+        row_scaled = loaded_pipeline.named_steps['preprocessor'].transform(row_df)
+
+        shap_values = explainer.shap_values(row_scaled)
+        expected_value = explainer.expected_value
+
+        response = {
+            'status_code': 200,
+            'body': {
+                'shap_values': np.array(shap_values).tolist(),
+                'expected_value': expected_value,
+            }
+        }
+        return response
+
+    except Exception as e:
+        traceback.print_exc()
+
+        response = {
+            'status_code': 500,
+            'body': str(e)
+        }
+        return response
 
 
-def load_iris():
-    # Charger le dataset Iris
-    iris = load_iris()
-    X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)
-    model = LogisticRegression()
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
-    model_params = model.get_params()
-    json_params = json.dumps(model_params)
+@app.route("/columns/mean", methods=['GET'])
+def colmuns_mean():
+    """ Return the main columns mean values """
+    data = pd.read_csv('./X_train_sample.csv', index_col=[0])
+    # loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+    # data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
+    # df_final = pd.DataFrame(data_scaled, columns=data.columns)
+    mean_df = data[MAIN_COLUMNS].mean()
+    return mean_df.to_json()
 
-    response = {
-        'dataset': 'iris',
-        'model_parameters': json_params,
-        'accuracy': accuracy
-    }
 
-    return response
-
-def load_my_dataframe():
-    # return jsonify({'prediction': prediction.tolist()})
-    data = pd.read_csv('../X_train_dataframe.csv')
+@app.route("/columns/neighbors/id/<int:customer_id>", methods=['GET'])
+def colmuns_neighbors(customer_id):
+    """ Return the 20 nearest neighbors main columns mean values """
+    data = pd.read_csv('./X_train_sample.csv', index_col=[0])
     loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
-    return {'first_value': data.iloc[0:1,:].values}
+    data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
+    # df_final = pd.DataFrame(data_scaled, columns=data.columns)
+    neighbors = NearestNeighbors(n_neighbors=20, algorithm='ball_tree').fit(data_scaled)
+    _, neighbors_indices = neighbors.kneighbors(data_scaled)
+    neighbors_df = data[MAIN_COLUMNS].iloc[neighbors_indices[customer_id]].mean()
+    return neighbors_df.to_json()
