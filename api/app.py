@@ -8,7 +8,7 @@ from sklearn.neighbors import NearestNeighbors
 import git
 
 app = Flask(__name__)
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = False
 
 # MAIN_COLUMNS = ['CODE_GENDER_M', 'FLAG_OWN_CAR', 'FLAG_OWN_REALTY', 'CNT_CHILDREN',
 #                 'NAME_FAMILY_STATUS_Married', 'NAME_INCOME_TYPE_Working',
@@ -26,14 +26,14 @@ MAIN_COLUMNS = ['CNT_CHILDREN','APPS_EXT_SOURCE_MEAN', 'APPS_GOODS_CREDIT_RATIO'
 def main():
 
     return {
-        'api':'test push from local',
+        'api':'test live',
         # 'data_shape': df_final.shape
     }
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('path/to/git_repo')
+        repo = git.Repo('https://github.com/MyNameIsKilian/OC-Projet-7')
         origin = repo.remotes.origin
         origin.pull()
         return 'Updated PythonAnywhere successfully', 200
