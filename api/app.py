@@ -25,7 +25,7 @@ MAIN_COLUMNS = ['CNT_CHILDREN','APPS_EXT_SOURCE_MEAN', 'APPS_GOODS_CREDIT_RATIO'
 def main():
 
     return {
-        'api':'quick set up',
+        'api':'test push from local',
         # 'data_shape': df_final.shape
     }
 
