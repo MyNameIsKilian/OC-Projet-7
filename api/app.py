@@ -31,6 +31,7 @@ def main():
     
 @app.route('/pull', methods=['GET'])
 def git_pull(project_path, remote_name):
+    """ Pull GitHub code """
     project_path = "../OC-Projet-7/"
     remote_name = "origin"
     try:
