@@ -3,46 +3,51 @@ import traceback
 import pandas as pd
 import pickle
 import numpy as np
-# import json
 from sklearn.neighbors import NearestNeighbors
-import git
+import subprocess
 
 app = Flask(__name__)
-# app.config["DEBUG"] = False
-
-# MAIN_COLUMNS = ['CODE_GENDER_M', 'FLAG_OWN_CAR', 'FLAG_OWN_REALTY', 'CNT_CHILDREN',
-#                 'NAME_FAMILY_STATUS_Married', 'NAME_INCOME_TYPE_Working',
-#                 'AMT_INCOME_TOTAL', 'DAYS_BIRTH', 'DAYS_EMPLOYED']
 
 MAIN_COLUMNS = ['CNT_CHILDREN','APPS_EXT_SOURCE_MEAN', 'APPS_GOODS_CREDIT_RATIO',
                 'AMT_INCOME_TOTAL', 'DAYS_BIRTH', 'DAYS_EMPLOYED']
 
-# data = pd.read_csv('./X_train_sample.csv', index_col=[0])
-# loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
-# data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
-# df_final = pd.DataFrame(data_scaled, columns=data.columns)
-
 @app.route("/")
 def main():
-
+    """ Return simple response to test APÏ """
     return {
-        'api':'test live',
-        # 'data_shape': df_final.shape
+        'api':'push from local to github, need to pull it from pythonanywhere',
     }
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    if request.method == 'POST':
-        repo = git.Repo('https://github.com/MyNameIsKilian/OC-Projet-7')
-        origin = repo.remotes.origin
-        origin.pull()
+# @app.route('/webhook', methods=['POST'])
+# def webhook():
+#     """ Return the 20 nearest neighbors main columns mean values """
+#     if request.method == 'POST':
+#         repo = git.Repo('https://github.com/MyNameIsKilian/OC-Projet-7')
+#         origin = repo.remotes.origin
+#         origin.pull()
+#         return 'Updated PythonAnywhere successfully', 200
+#     else:
+#         return 'Wrong event type', 400
+    
+@app.route('/pull', methods=['GET'])
+def git_pull(project_path, remote_name):
+    project_path = "../OC-Projet-7/"
+    remote_name = "origin"
+    try:
+        subprocess.run(['git', 'rev-parse'], cwd=project_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        subprocess.run(['git', 'pull', remote_name], cwd=project_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        print("Git pull réussi.")
         return 'Updated PythonAnywhere successfully', 200
-    else:
-        return 'Wrong event type', 400
+    except subprocess.CalledProcessError as e:
+        print(f"Erreur lors du git pull : {e}")
+        return 'Error during pull command', 400
+    except Exception as ex:
+        print(f"Erreur inattendue : {ex}")
+        return 'Error unknown', 400
 
 @app.route('/prediction', methods=['POST'])
 def lgbm_prediction():
-
+    """ Return probabilties to predict class 0 and 1 """
     try:
         row_data = request.get_json()
         loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
@@ -66,7 +71,7 @@ def lgbm_prediction():
 
 @app.route('/shap-values', methods=['POST'])
 def load_shap_values():
-
+    """ Return shap values of the customer """
     try:
         row_data = request.get_json()
         row_df = pd.DataFrame([row_data], index=[0])
@@ -95,17 +100,12 @@ def load_shap_values():
         }
         return response
 
-
 @app.route("/columns/mean", methods=['GET'])
 def colmuns_mean():
     """ Return the main columns mean values """
     data = pd.read_csv('./X_train_sample.csv', index_col=[0])
-    # loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
-    # data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
-    # df_final = pd.DataFrame(data_scaled, columns=data.columns)
     mean_df = data[MAIN_COLUMNS].mean()
     return mean_df.to_json()
-
 
 @app.route("/columns/neighbors/id/<int:customer_id>", methods=['GET'])
 def colmuns_neighbors(customer_id):
@@ -113,7 +113,6 @@ def colmuns_neighbors(customer_id):
     data = pd.read_csv('./X_train_sample.csv', index_col=[0])
     loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
     data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
-    # df_final = pd.DataFrame(data_scaled, columns=data.columns)
     neighbors = NearestNeighbors(n_neighbors=20, algorithm='ball_tree').fit(data_scaled)
     _, neighbors_indices = neighbors.kneighbors(data_scaled)
     neighbors_df = data[MAIN_COLUMNS].iloc[neighbors_indices[customer_id]].mean()
