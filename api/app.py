@@ -5,6 +5,7 @@ import pickle
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
 import subprocess
+import git
 
 app = Flask(__name__)
 
@@ -18,19 +19,19 @@ def main():
         'api':'push from local to github, need to pull it from pythonanywhere',
     }
 
-# @app.route('/webhook', methods=['POST'])
-# def webhook():
-#     """ Return the 20 nearest neighbors main columns mean values """
-#     if request.method == 'POST':
-#         repo = git.Repo('https://github.com/MyNameIsKilian/OC-Projet-7')
-#         origin = repo.remotes.origin
-#         origin.pull()
-#         return 'Updated PythonAnywhere successfully', 200
-#     else:
-#         return 'Wrong event type', 400
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    """ Pull GitHub code via webhook when a push to the repo is triggered """
+    if request.method == 'POST':
+        repo = git.Repo('../OC-Projet-7')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'Updated PythonAnywhere successfully', 200
+    else:
+        return 'Wrong event type', 400
     
 @app.route('/pull', methods=['GET'])
-def git_pull(project_path, remote_name):
+def git_pull():
     """ Pull GitHub code """
     project_path = "../OC-Projet-7/"
     remote_name = "origin"
