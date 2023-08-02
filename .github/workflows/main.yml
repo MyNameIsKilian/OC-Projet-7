@@ -19,7 +19,8 @@ jobs:
       run: pip install -r requirements.txt
     - name: Run unit tests
       run: pytest -v
-    # - name: Deploy to PythonAnywhere
+    - name: Deploy to PythonAnywhere
+      run: curl https://kiliandatadev.pythonanywhere.com/pull
     
     #   uses: chrislennon/action-pythonanywhere-deploy@v1
     #   with:
