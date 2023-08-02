@@ -18,17 +18,6 @@ def main():
     return {
         'api':'push from local to github, need to pull it from pythonanywhere',
     }
-
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    """ Pull GitHub code via webhook when a push to the repo is triggered """
-    if request.method == 'POST':
-        repo = git.Repo('../OC-Projet-7')
-        origin = repo.remotes.origin
-        origin.pull()
-        return 'Updated PythonAnywhere successfully', 200
-    else:
-        return 'Wrong event type', 400
     
 @app.route('/pull', methods=['GET'])
 def git_pull():
