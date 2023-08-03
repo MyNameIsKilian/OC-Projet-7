@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 # large CSV
-data_agg.csv
-data_cleaned.csv
+data/data_agg.csv
+data/data_cleaned.csv

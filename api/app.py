@@ -94,14 +94,14 @@ def load_shap_values():
 @app.route("/columns/mean", methods=['GET'])
 def colmuns_mean():
     """ Return the main columns mean values """
-    data = pd.read_csv('./X_train_sample.csv', index_col=[0])
+    data = pd.read_csv('./data/X_train_sample.csv', index_col=[0])
     mean_df = data[MAIN_COLUMNS].mean()
     return mean_df.to_json()
 
 @app.route("/columns/neighbors/id/<int:customer_id>", methods=['GET'])
 def colmuns_neighbors(customer_id):
     """ Return the 20 nearest neighbors main columns mean values """
-    data = pd.read_csv('./X_train_sample.csv', index_col=[0])
+    data = pd.read_csv('./data/X_train_sample.csv', index_col=[0])
     loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
     data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
     neighbors = NearestNeighbors(n_neighbors=20, algorithm='ball_tree').fit(data_scaled)
