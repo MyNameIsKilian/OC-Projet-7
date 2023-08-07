@@ -18,6 +18,6 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
     - name: Run unit tests
-      run: pytest -v
+      run: pytest -v --disable-warnings
     - name: Deploy to PythonAnywhere
       run: curl https://kiliandatadev.pythonanywhere.com/pull
