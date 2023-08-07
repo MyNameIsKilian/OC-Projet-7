@@ -16,7 +16,7 @@ MAIN_COLUMNS = ['CNT_CHILDREN','APPS_EXT_SOURCE_MEAN', 'APPS_GOODS_CREDIT_RATIO'
 def main():
     """ Return simple response to test APÏ """
     return {
-        'api':'push from local to github, need to pull it from pythonanywhere',
+        'Welcome to the kiliandatadev API !',
     }
     
 @app.route('/pull', methods=['GET'])
@@ -41,7 +41,7 @@ def lgbm_prediction():
     """ Return probabilties to predict class 0 and 1 """
     try:
         row_data = request.get_json()
-        loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+        loaded_pipeline = pickle.load(open('./models/pipeline.sav', 'rb'))
         row_df = pd.DataFrame([row_data], index=[0])
         prediction = loaded_pipeline.predict_proba(row_df)
 
@@ -66,8 +66,8 @@ def load_shap_values():
     try:
         row_data = request.get_json()
         row_df = pd.DataFrame([row_data], index=[0])
-        loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
-        explainer = pickle.load(open('shap_explainer.sav', 'rb'))
+        loaded_pipeline = pickle.load(open('./models/pipeline.sav', 'rb'))
+        explainer = pickle.load(open('./models/shap_explainer.sav', 'rb'))
         row_scaled = loaded_pipeline.named_steps['preprocessor'].transform(row_df)
 
         shap_values = explainer.shap_values(row_scaled)
@@ -102,7 +102,7 @@ def colmuns_mean():
 def colmuns_neighbors(customer_id):
     """ Return the 20 nearest neighbors main columns mean values """
     data = pd.read_csv('./data/X_train_sample.csv', index_col=[0])
-    loaded_pipeline = pickle.load(open('pipeline.sav', 'rb'))
+    loaded_pipeline = pickle.load(open('./models/pipeline.sav', 'rb'))
     data_scaled = loaded_pipeline.named_steps['preprocessor'].transform(data)
     neighbors = NearestNeighbors(n_neighbors=20, algorithm='ball_tree').fit(data_scaled)
     _, neighbors_indices = neighbors.kneighbors(data_scaled)
